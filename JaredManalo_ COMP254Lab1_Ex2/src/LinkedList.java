@@ -139,6 +139,16 @@ public class LinkedList {
 
 
     public void swapNodes(Node node1, Node node2) {
+        if (node1 == null || node2 == null || head == null || node1 == node2) {
+            // check for null or same node swap attempt
+            return;
+        }
+
+        if (node1 == head) {
+            head = node2;
+        } else if (node2 == head) {
+            head = node1;
+        }
 
         Node prev1 = null, prev2 = null, current = head;
 
@@ -150,6 +160,11 @@ public class LinkedList {
             }
 
             current = current.getNext();
+        }
+
+        if (prev1 == null || prev2 == null) {
+            // One or both nodes not found in the list
+            return;
         }
 
         prev1.setNext(node2);
