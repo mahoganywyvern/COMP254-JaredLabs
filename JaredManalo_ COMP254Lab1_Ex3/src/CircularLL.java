@@ -154,25 +154,34 @@ public class CircularLL {
     }
 
     public CircularLL Clone() {
+        // Create a new instance of CircularLL to store the cloned list
         CircularLL clonedList = new CircularLL();
 
+        // Check if OG list is not empty
         if (this.head != null) {
+            // Initialize a reference to the current node in the original list
             Node originalCurrent = this.head;
 
+            // goe through the original list until the tail is reached
             while (originalCurrent != this.tail) {
+                // add copied node to new list
                 clonedList.insertAtEnd(originalCurrent.getData());
+
+                // Move to the next node in the OG list
                 originalCurrent = originalCurrent.getNext();
             }
 
-            // Insert the last node and set the head and tail of the cloned list
+            // Insert the last node of the OG list into the cloned list
             clonedList.insertAtEnd(originalCurrent.getData());
+
+            // Set head and tail of the cloned list
             clonedList.setHead(clonedList.getHead());
             clonedList.setTail(clonedList.getTail());
         }
 
+        // Return cloned list
         return clonedList;
     }
-
 
     /**
      * Method to display the circular linked list
