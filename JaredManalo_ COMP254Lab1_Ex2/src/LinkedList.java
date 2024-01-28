@@ -144,32 +144,39 @@ public class LinkedList {
             return;
         }
 
+
+        // check and handle node being a head
         if (node1 == head) {
             head = node2;
         } else if (node2 == head) {
             head = node1;
         }
-
+        // variables for tracking previous nodes and current node
         Node prev1 = null, prev2 = null, current = head;
 
+        //traverse linked list to find previous nodes of 1 and 2
         while (current != null && (prev1 == null || prev2 == null)) {
             if (current.getNext() == node1) {
                 prev1 = current;
             } else if (current.getNext() == node2) {
                 prev2 = current;
             }
-
+        // Move to the next node in the list
             current = current.getNext();
         }
 
+
+        // Check for nodes not being found
         if (prev1 == null || prev2 == null) {
-            // One or both nodes not found in the list
+
             return;
         }
 
+        //swap nodes and update pointers/links
         prev1.setNext(node2);
         prev2.setNext(node1);
 
+        //swap next pointers of 1 and 2
         Node temp = node1.getNext();
         node1.setNext(node2.getNext());
         node2.setNext(temp);
