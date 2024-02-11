@@ -156,6 +156,8 @@ public class LinkedList {
 
         //traverse linked list to find previous nodes of 1 and 2
         while (current != null && (prev1 == null || prev2 == null)) {
+
+            //if and else if check if next node of current node = node1 or node2
             if (current.getNext() == node1) {
                 prev1 = current;
             } else if (current.getNext() == node2) {
