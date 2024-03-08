@@ -30,6 +30,6 @@ public class Main {
             System.out.println("The string is not a palindrome.");
         }
 
-        FFinder.find("C:\\Users\\moksi\\OneDrive\\Documents\\WINTER 20240", "foundme.txt");
+        FFinder.find("C:\\Users\\moksi\\OneDrive\\Documents\\WINTER 2024", "foundme.txt");
         }
     }
