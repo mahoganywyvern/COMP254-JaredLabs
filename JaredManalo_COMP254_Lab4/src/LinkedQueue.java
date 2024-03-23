@@ -74,7 +74,7 @@ public class LinkedQueue<T> {
         if (Q2.isEmpty()) {
             return; // Nothing to concatenate if Q2 is empty
         }
-        // If queue is empty, make first node of queue point tofirst node of Q2
+        // If queue is empty, make first node of queue point to first node of Q2
         if (isEmpty()) {
             first = Q2.first;
         } else {

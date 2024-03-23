@@ -22,7 +22,7 @@ public class FFinder {
     private static void findFiles(File directory, String filename) {
         File[] files = directory.listFiles(); //list of files/directories within current directory
         if (files != null) { //nullcheck
-            for (File file : files) { // Iterate thru each file/directory in the list
+            for (File file : files) { // Iterate thru each file/directory in the list of files
                 if (file.isDirectory()) { //directory check
                     // Recursively search subdirectories
                     findFiles(file, filename); // case directory: recursively call this method to search thru dir

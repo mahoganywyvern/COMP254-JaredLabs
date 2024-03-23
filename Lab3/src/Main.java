@@ -25,9 +25,9 @@ public class Main {
         String input = scanner.nextLine();
 
         if (PCheck.isPalindrome(input)) {
-            System.out.println("The string is a palindrome.");
+            System.out.println("The string is a palindrome! \uD83D\uDC4D");
         } else {
-            System.out.println("The string is not a palindrome.");
+            System.out.println("The string is not a palindrome... \uD83D\uDC4E");
         }
 
         FFinder.find("C:\\Users\\moksi\\OneDrive\\Documents\\WINTER 2024", "foundme.txt");

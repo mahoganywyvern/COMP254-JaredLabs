@@ -14,7 +14,7 @@ public class Exercise2 {
     // Method to transfer elements from stack S to stack T
     public static void transfer(Stack<Integer> S, Stack<Integer> T) {
         while (!S.isEmpty()) {
-            T.push(S.pop());
+            T.push(S.pop()); //takes top values from S (pop) and puts it to T(push)
         }
     }
 
@@ -29,13 +29,17 @@ public class Exercise2 {
         stackS.push(3);
         stackS.push(4);
 
+
+        System.out.println("T"+ stackT);
+        System.out.println("S"+ stackS);
         // Transfer elements from stack S to stack T
         transfer(stackS, stackT);
 
+
         // Print elements of stack T (the transferred elements)
         System.out.println("Elements in stack T after transfer:");
-        while (!stackT.isEmpty()) {
-            System.out.println(stackT.pop());
-        }
+        System.out.println("T"+ stackT);
+        System.out.println("S"+ stackS);
+
     }
 }
