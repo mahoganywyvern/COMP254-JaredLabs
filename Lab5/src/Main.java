@@ -46,8 +46,13 @@ public class Main {
 
         int height = Math.max(leftHeight, rightHeight) + 1; // Height of current node is 1 + maximum height of its subtrees
 
-        System.out.println("Element: " + node.val + ", Height: " + height); // Print element and height of current node
+        System.out.println("E: " + node.val + ", H: " + height); // Print element and height of current node
 
         return height; // Return height of current node to parent node
+
+
+
+
+
     }
 }
